@@ -15,3 +15,5 @@ Redux Online Store is a fully-featured e-commerce application that allows users 
 - **Backend:** Node.js, GraphQL
 - **Database:** MongoDB
 - **Authentication:** JWT (JSON Web Tokens)
+## Screenshots
+![image](https://github.com/user-attachments/assets/cc1c7516-b3b5-42cf-9c4c-880c677b8118)
