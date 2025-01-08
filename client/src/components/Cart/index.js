@@ -24,12 +24,16 @@ const Cart = () => {
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
   useEffect(() => {
-    if (data) {
+  if (data) {
+    if (data.checkout) {
       stripePromise.then((res) => {
         res.redirectToCheckout({ sessionId: data.checkout.session });
       });
+    } else {
+      console.error("Checkout session is null:", data);
     }
-  }, [data]);
+  }
+}, [data]);
 
   useEffect(() => {
     async function getCart() {
